@@ -11,6 +11,7 @@ game_field = battlefield.create_field()
 list_of_ships = [4, 3, 3, 2, 2, 2, 1, 1, 1, 1]#[4, 3, 3, 2, 2, 2, 1, 1, 1, 1]
 
 def start():
+
     print("Created field")
     print(*adding_ships(list_of_ships),sep='\n')
 
@@ -98,12 +99,14 @@ def adding_ships(list_of_ships):
 
         #print(*game_field,sep='\n')
         #print("Ship was added to game field")
+    
+    for i in range(len(game_field)):
+        game_field[i] = ' '.join(game_field[i])
 
     return game_field
 
 
 #print(*game_field,sep='\n')
-
 
 if __name__=="__main__":
 	start()
